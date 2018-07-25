@@ -1,0 +1,60 @@
+<ion-content padding>
+<ion-list>
+  <ion-card color="primary">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>   
+  </ion-card>
+    <ion-card>
+      
+        <ion-label>ionic test</ion-label>
+        <ion-toggle (click)="isClicked(data.myToggle)" [(ngModel)]="data.myToggle"></ion-toggle>
+    </ion-card>
+  
+    <ion-card *ngIf="data.myToggle">
+        <ion-card-header>
+            select only one
+          </ion-card-header>
+    
+        <ion-item>
+            <ion-label color="primary" text-wrap>Which directive would be used to check if toggle is activated</ion-label>
+            <ion-input placeholder="___" maxlength="1"></ion-input>
+          </ion-item>
+        <ion-list>
+          <ion-item nav-clear menu-close ng-show="submenu">
+              <ion-list>
+                  <ion-item nav-clear menu-close>a.*ngfor</ion-item>
+                  <ion-item nav-clear menu-close>b *ngif</ion-item>
+                  <ion-item nav-clear menu-close>c *ngModel</ion-item>
+                  <ion-item [style.color]=" 'green'" nav-clear menu-close >{{text}}</ion-item>
+        
+              </ion-list>
+          </ion-item>  
+        </ion-list>
+        <button ion-button round color="secondary" (click)="answer()">answer</button>
+        
+    </ion-card>
+    
+    <ion-card *ngIf="!data.myToggle">
+        <ion-card-header>
+           answers
+        </ion-card-header >
+       
+       <ion-card> 
+         <p text-wrap>A toggle technically is the same thing as an HTML checkbox input, except it looks different and is easier to use on a touch device. Toggles can also have colors assigned to them, by adding any color attribute. </p>
+         </ion-card>
+         <ion-card>
+          <div class="video-container">
+                <iframe width="854" height="480" src="https://www.youtube.com/embed/I7f8zbmqzbA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>          </div>
+      </ion-card>
+  <ion-card>
+    <iframe src="https://scontent.fsan1-2.fna.fbcdn.net/v/t1.0-9/37602559_924402541095306_7310794250650648576_o.jpg?_nc_cat=0&oh=16a779dd2ef9878951a23edde279557a&oe=5BE2E445" frameborder="0" width="560" height="315"></iframe>
+    
+      
+        </ion-card>
+   
+    </ion-card>
+  <button ion-button round color="secondary" (click)="goAnOtherPage2()">NEXT</button>
+  
+  </ion-list>
+  </ion-content>

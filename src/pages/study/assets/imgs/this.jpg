@@ -1,0 +1,1 @@
+file = new File ([encoded string], 'placomerc.jpg', {type: 'image/jpeg'})

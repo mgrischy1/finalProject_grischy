@@ -1,0 +1,70 @@
+
+
+<ion-content padding>
+    <header>
+  <ion-item color="primary">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> 
+    </ion-item>  
+</header>
+<ion-list>
+  
+    <ion-card>
+      
+        <ion-label>ionic test</ion-label>
+        <ion-toggle (click)="isClicked(data.myToggle)" [(ngModel)]="data.myToggle"></ion-toggle>
+    </ion-card>
+  
+    <ion-card *ngIf="data.myToggle">
+        <ion-card-header>
+          select only one       
+       </ion-card-header>
+    
+        <ion-item>
+            <ion-label color="primary" text-wrap>The best way to use forms is to use ___ and ___ as your main classes</ion-label>
+            <ion-input placeholder="___"   maxlength="1"></ion-input>
+          </ion-item>
+        <ion-list>
+          <ion-item nav-clear menu-close ng-show="submenu">
+              <ion-list>
+                  <ion-item nav-clear menu-close>a. list,item</ion-item>
+                  <ion-item nav-clear menu-close>b. directives,components</ion-item>
+                  <ion-item nav-clear menu-close>c. both a and b</ion-item>
+                  <ion-item [style.color]=" 'green'" nav-clear menu-close >{{text}}</ion-item>
+                 
+
+              </ion-list>
+          </ion-item>  
+        </ion-list>
+        <button ion-button round color="secondary" (click)="answer()">answer</button>
+        
+    </ion-card>
+    
+    <ion-card *ngIf="!data.myToggle">
+        <ion-card-header>
+           explained
+        </ion-card-header >
+        
+       <ion-card> 
+         <p text-wrap>Ionic forms are mostly used for interaction with users and collecting needed info. 
+
+               
+                The best way to use forms is to use list and item as your main classes. Your app will usually consist more than one-form element, so it makes sense to organize it as a list. In the following example, you can notice that the item element is a label tag.
+                
+                You can use any other element, but a label will provide the ability to tap on any part of the element to focus your text input. You can set a placeholder that will look different from the input text and it will be hidden as soon as you start typing. You can see this in the example below. </p>
+         </ion-card>
+         <div class="card">
+    <ion-item>
+        <div class="video-container">
+                <iframe width="854" height="480" src="https://www.youtube.com/embed/K6ipVlp9oA0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>        </div>
+             <ion-card>
+          <iframe src="https://scontent.fsan1-2.fna.fbcdn.net/v/t1.0-9/37669721_924396957762531_2850083453733437440_o.jpg?_nc_cat=0&oh=78c501ca1ba026a0e8103c7e877685eb&oe=5BE5B21B" frameborder="0" width="560" height="315"></iframe>
+</ion-card>
+    </ion-item>
+</div>
+    </ion-card>
+   
+  </ion-list>
+  
+</ion-content>

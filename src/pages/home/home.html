@@ -1,14 +1,67 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <header>
+        <ion-item color="primary">
+          <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button> 
+          </ion-item>  
+      </header>
+<ion-list>
+  
+  <ion-card>
+      <ion-label >ionic test</ion-label>
+      <ion-toggle (click)="isClicked(data.myToggle)" [(ngModel)]="data.myToggle"></ion-toggle>
+  </ion-card>
+
+  <ion-card *ngIf="data.myToggle">
+      <ion-card-header>
+         click if true
+      </ion-card-header>
+  
+      <ion-list>
+        <ion-label text-wrap> click if true</ion-label>
+        <ion-label text-wrap>[(ngModel)] is a Simple forms that binds and passes an object in our class {{finalCount}}</ion-label>
+        <ion-checkbox  [(ngModel)]="checked" ></ion-checkbox>
+        <ion-label text-wrap> lists are not an efficient way to display lots of information in a small space</ion-label>
+        <ion-checkbox  [(ngModel)]="checked2" ></ion-checkbox>
+        <ion-label text-wrap>ngFor adds DOM elements for each item from an array</ion-label>
+        <ion-checkbox  [(ngModel)]="checked3" ></ion-checkbox>
+        <ion-label text-wrap>Ionic apps are made of high-level building blocks called components</ion-label>
+        <ion-checkbox  [(ngModel)]="checked4"></ion-checkbox>
+        <ion-label text-wrap>Controller is the base class for navigation controller components like Nav and Tab</ion-label>
+        <ion-checkbox [(ngModel)]="checked5" ></ion-checkbox>
+        <ion-label text-wrap>A Modal is a content pane that goes over the user's current page</ion-label>
+        <ion-checkbox [(ngModel)]="checked6" ></ion-checkbox>
+        <ion-label text-wrap>Ionic Native is a TypeScript wrapper for Cordova/PhoneGap plugins that make adding any native functionality you need to your Ionic mobile app easy </ion-label>
+        <ion-checkbox [(ngModel)]="checked7" ></ion-checkbox>
+      </ion-list>
+  </ion-card>
+  
+  <ion-card *ngIf="!data.myToggle">
+      <ion-card-header>
+         answers
+      </ion-card-header>
+      
+      <ion-list>
+        
+        <ion-label>[(ngModel)] is a Simple forms that binds and passes an object in our class </ion-label>
+        <ion-label [style.color]="checked ? 'green' : 'red'">true</ion-label>
+        <ion-label> lists are not an efficient way to display lots of information in a small space</ion-label>
+        <ion-label [style.color]="checked2 ? 'red' : 'green'">false</ion-label>
+        <ion-label>ngFor adds DOM elements for each item from an array</ion-label>
+        <ion-label [style.color]="checked3 ? 'green' : 'red'">true</ion-label>
+        <ion-label>Ionic apps are made of high-level building blocks called components</ion-label>
+        <ion-label [style.color]="checked4 ? 'green' : 'red'">true</ion-label>
+        <ion-label>Controller is the base class for navigation controller components like Nav and Tab</ion-label>
+        <ion-label [style.color]="checked5 ? 'red' : 'green'">false</ion-label>
+        <ion-label>A Modal is a content pane that goes over the user's current page</ion-label>
+        <ion-label [style.color]="checked6 ? 'green' : 'red'">true</ion-label>
+        <ion-label>Ionic Native is a TypeScript wrapper for Cordova/PhoneGap plugins that make adding any native functionality you need to your Ionic mobile app easy</ion-label>
+        <ion-label [style.color]="checked7 ? 'green' : 'red'">true</ion-label>
+      </ion-list>
+  </ion-card>
+<button ion-button round color="secondary" (click)="goAnOtherPage2()">NEXT</button>
+
+</ion-list>
 </ion-content>

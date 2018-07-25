@@ -1,0 +1,60 @@
+<!--
+  Generated template for the SecondPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar color="primary">
+    <ion-title>second</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label color="primary" text-wrap>this.___.push(NextPage}</ion-label>
+    <ion-input placeholder="___" type="text" maxlength="1" [(ngModel)]="input" (ngModelChange)="input = $event.toLocaleLowerCase()" name="input"></ion-input>
+  </ion-item>
+<ion-list>
+  <ion-item nav-clear menu-close ng-show="submenu">
+      <ion-list>
+          <ion-item nav-clear menu-close>a. navCtrl</ion-item>
+          <ion-item nav-clear menu-close>b. navControle </ion-item>
+          <ion-item nav-clear menu-close>c. nav</ion-item>
+
+      </ion-list>
+  </ion-item>  
+</ion-list>
+<ion-item>
+  <ion-label color="primary" text-wrap>To make a new page in app.module one must implement in</ion-label>
+  <ion-input placeholder="___" type="text" maxlength="1" [(ngModel)]="input2" (ngModelChange)="input2 = $event.toLocaleLowerCase()" name="input2"></ion-input>
+</ion-item>
+<ion-list>
+<ion-item nav-clear menu-close ng-show="submenu">
+    <ion-list>
+        <ion-item nav-clear menu-close>a. imports,declarations</ion-item>
+        <ion-item nav-clear menu-close>b. declarations,entryComponents</ion-item>
+        <ion-item nav-clear menu-close>c. imports,providers</ion-item>
+
+    </ion-list>
+</ion-item>  
+</ion-list>
+<ion-item>
+  <ion-label color="primary" text-wrap>The pages that one must involve to implement a side menu are</ion-label>
+  <ion-input placeholder="___" type="text" maxlength="1" [(ngModel)]='input3' (ngModelChange)="input3 = $event.toLocaleLowerCase()" name='input3 '></ion-input> 
+</ion-item>
+<ion-list>
+<ion-item nav-clear menu-close ng-show="submenu">
+    <ion-list>
+        <ion-item nav-clear menu-close>a. app.html,app.module,pages/your.html</ion-item>
+        <ion-item nav-clear menu-close>b. app.html,app.component,pages/your.html</ion-item>
+        <ion-item nav-clear menu-close>c. pages/your.ts,app.component,pages/your.html</ion-item>
+
+    </ion-list>
+</ion-item>  
+</ion-list>
+<button ion-button round color="secondary" (click)="answer()">answer</button>
+</ion-content>

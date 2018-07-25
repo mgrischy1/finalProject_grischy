@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-item color="primary" >
+  
+  <button ion-button icon-only menuToggle>
+  <ion-icon name="menu"></ion-icon>
+</button> 
+  <ion-title  text-center >Log in</ion-title>
+</ion-item>
+
+</ion-header>
+
+
+
+<ion-content #myContent class="home">
+  <ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+  </ul>
+
+<form #f="ngForm" (ngSubmit)="onSignin(f, username.value)">
+  <ion-list>
+    <ion-item >
+      <ion-label fixed>Email</ion-label>
+      <ion-input
+        type="email"
+        ngModel
+        name="email"
+        required
+        #username></ion-input>
+    </ion-item>
+    <ion-item class="input-password">
+        <ion-label fixed>Password</ion-label>
+        <ion-input
+          type="password"
+          ngModel
+          name="password"
+          required></ion-input>
+      </ion-item>
+  </ion-list>
+  <button ion-button block color="primary" type="submit" [disabled]="!f.valid">Sign in</button>
+ 
+</form>
+<button ion-button block color="primary" type="submit" (click)="goToSignUp()">Sign up</button>
+<p class="logo">
+  <ion-icon name="code"></ion-icon>
+</p>
+</ion-content>
